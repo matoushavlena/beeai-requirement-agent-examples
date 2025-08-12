@@ -60,8 +60,8 @@ uv run examples/10_safety_stop.py
 ```
 
 Required environment variables:
-- `MODEL`: Model to use. Defaults to `openai:gpt-5-nano`, but you can also try `ollama:gpt-oss-20b` or other supported models
-- `API_KEY`: Your OpenAI API key (optional)
+- `MODEL`: Defaults to `openai:gpt-5-nano`. Can also be `ollama:gpt-oss-20b` or other models.
+- `API_KEY`: Your API key for the selected provider (optional).
 
 **Note**: Examples have been tested on `gpt-5-nano`. Other models may behave differently with the constraints.
 
