@@ -2,7 +2,8 @@
 
 A collection of 10 ready-to-run examples demonstrating the **Requirement Agent** from the [BeeAI Framework](https://framework.beeai.dev/experimental/requirement-agent). These examples show how to guide agent behavior using constraints rather than rigid workflows or fragile prompts.
 
-✅ Tested on gpt-5-nano
+✅ Tested on `gpt-5-nano`  
+🕑 Support for `ollama:gpt-oss:20b` pending ([issue](https://github.com/ollama/ollama/issues/11691))
 
 ## What is Requirement Agent?
 
@@ -60,7 +61,7 @@ uv run examples/10_safety_stop.py
 ```
 
 Required environment variables:
-- `MODEL`: Defaults to `openai:gpt-5-nano`. Can also be `ollama:gpt-oss-20b` or other models.
+- `MODEL`: Defaults to `openai:gpt-5-nano` (see top note for `ollama:gpt-oss-20b` support status). Other models may also work.
 - `API_KEY`: Your API key for the selected provider (optional).
 
 **Note**: Examples have been tested on `gpt-5-nano`. Other models may behave differently with the constraints.
