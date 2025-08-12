@@ -63,6 +63,12 @@ uv run examples/02_exact_tool_usage.py
 # ... etc
 ```
 
+## Presentation
+
+View the presentation for a visual overview of the 10 examples with code snippets:
+- [Slides (Markdown)](presentation.md)
+- [Slides (PDF)](presentation.pdf)
+
 ## Documentation
 
 For full documentation, visit: https://framework.beeai.dev/experimental/requirement-agent

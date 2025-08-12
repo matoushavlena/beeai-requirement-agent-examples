@@ -249,4 +249,7 @@ agent = RequirementAgent(
 
 # Thanks!
 Which one would you use first?
-Let’s connect on [LinkedIn](https://www.linkedin.com/in/matoushavlena) — **@matoushavlena**
+
+**Repository**: [github.com/matoushavlena/beeai-requirement-agent-examples](https://github.com/matoushavlena/beeai-requirement-agent-examples)
+
+Let's connect on [LinkedIn](https://www.linkedin.com/in/matoushavlena) — **@matoushavlena**
