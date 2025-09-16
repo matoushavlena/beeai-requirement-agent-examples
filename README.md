@@ -1,6 +1,6 @@
 # BeeAI Requirement Agent Examples
 
-A collection of 10 ready-to-run examples demonstrating the **Requirement Agent** from the [BeeAI Framework](https://framework.beeai.dev/experimental/requirement-agent). These examples show how to guide agent behavior using constraints rather than rigid workflows or fragile prompts.
+A collection of 11 ready-to-run examples demonstrating the **Requirement Agent** from the [BeeAI Framework](https://framework.beeai.dev/experimental/requirement-agent). These examples show how to guide agent behavior using constraints rather than rigid workflows or fragile prompts.
 
 ✅ Tested on `gpt-5-nano`  
 🕑 Support for `ollama:gpt-oss:20b` pending ([issue](https://github.com/ollama/ollama/issues/11691))
@@ -36,6 +36,7 @@ Perfect for:
 8. 🏁 **[Final Action Required](examples/08_final_action.py)** - Must send a summary report before returning the final answer
 9. ☝️ **[Permission Required](examples/09_permission_required.py)** - Ask user before sending an email to their manager
 10. 🛑 **[Safety Stop](examples/10_safety_stop.py)** - Stop if agent outputs something resembling an API key
+11. 🌐 **[MCP Server Integration](examples/11_mcp_server_integration.py)** - Expose RequirementAgent as an MCP server with conditional tool constraints
 
 ## Quickstart
 
@@ -58,6 +59,7 @@ uv run examples/07_tool_dependency.py
 uv run examples/08_final_action.py
 uv run examples/09_permission_required.py
 uv run examples/10_safety_stop.py
+uv run examples/11_mcp_server_integration.py
 ```
 
 Required environment variables:

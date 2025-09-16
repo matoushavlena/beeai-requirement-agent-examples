@@ -44,7 +44,7 @@ async def main():
     response = await agent.run("Analyze our quarterly sales data and prepare a report.").middleware(
         GlobalTrajectoryMiddleware(included=[Tool])
     )
-    print(response.answer.text)
+    print(response.last_message.text)
 
 
 if __name__ == "__main__":

@@ -72,7 +72,7 @@ async def main():
     response = await agent.run("Find information about New York City on Wikipedia.").middleware(
         GlobalTrajectoryMiddleware(included=[Tool])
     )
-    print(response.answer.text)
+    print(response.last_message.text)
 
 
 if __name__ == "__main__":

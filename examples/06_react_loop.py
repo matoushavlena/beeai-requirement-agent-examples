@@ -50,7 +50,7 @@ async def main():
     response = await agent.run("What's the weather in Paris and what is the city's population?").middleware(
         GlobalTrajectoryMiddleware(included=[Tool])
     )
-    print(response.answer.text)
+    print(response.last_message.text)
 
 
 if __name__ == "__main__":

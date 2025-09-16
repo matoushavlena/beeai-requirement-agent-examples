@@ -1,15 +1,14 @@
-"""Example 1: Require context before tool use
+"""Example 11: MCP Server Integration
 
-Ensure agent gets user location before querying weather.
-This prevents the weather tool from being used without proper context.
+Demonstrates how to integrate RequirementAgent with an MCP (Model Context Protocol) server,
+allowing the agent to be exposed as a service with conditional tool usage constraints.
+The weather tool can only be used after the user's location is fetched.
 """
 
-import asyncio
-
+from beeai_framework.adapters.mcp.serve.server import MCPServer, MCPServerConfig
 from beeai_framework.agents.experimental import RequirementAgent
 from beeai_framework.agents.experimental.requirements.conditional import ConditionalRequirement
-from beeai_framework.middleware.trajectory import GlobalTrajectoryMiddleware
-from beeai_framework.tools import Tool, tool
+from beeai_framework.tools import tool
 
 from examples.utils import llm
 
@@ -26,7 +25,7 @@ def weather_tool(location: str) -> str:
     return f"Weather for {location}: 22°C, partly cloudy"
 
 
-async def main():
+def main():
     # Create agent with constraint: weather tool can only be used after location is fetched
     agent = RequirementAgent(
         llm=llm,
@@ -34,10 +33,10 @@ async def main():
         requirements=[ConditionalRequirement(weather_tool, only_after=[fetch_user_location])],
     )
 
-    # The agent will automatically fetch location before checking weather
-    response = await agent.run("What's the weather like?").middleware(GlobalTrajectoryMiddleware(included=[Tool]))
-    print(response.last_message.text)
+    server = MCPServer(config=MCPServerConfig(transport="streamable-http"))
+    server.register(agent)
+    server.serve()
 
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    main()

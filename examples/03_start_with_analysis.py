@@ -38,7 +38,7 @@ async def main():
     response = await agent.run("What analysis steps are needed for creating a marketing campaign?").middleware(
         GlobalTrajectoryMiddleware(included=[Tool])
     )
-    print(response.answer.text)
+    print(response.last_message.text)
 
 
 if __name__ == "__main__":

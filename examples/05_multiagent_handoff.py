@@ -80,7 +80,7 @@ async def main():
     response = await agent.run(
         "I want to plan a beach vacation. Can you help me with destinations and weather?"
     ).middleware(GlobalTrajectoryMiddleware(included=[Tool]))
-    print(response.answer.text)
+    print(response.last_message.text)
 
 
 if __name__ == "__main__":

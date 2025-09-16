@@ -70,7 +70,7 @@ async def main():
     response = await agent.run("Review the transaction error logs").middleware(
         GlobalTrajectoryMiddleware(included=[Tool])
     )
-    print(response.answer.text)
+    print(response.last_message.text)
 
 
 if __name__ == "__main__":

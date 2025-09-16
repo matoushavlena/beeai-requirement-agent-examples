@@ -49,7 +49,7 @@ async def main():
     response = await agent.run("Book me a flight from New York to Los Angeles.").middleware(
         GlobalTrajectoryMiddleware(included=[Tool])
     )
-    print(response.answer.text)
+    print(response.last_message.text)
 
 
 if __name__ == "__main__":

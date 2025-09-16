@@ -9,7 +9,7 @@ authors = [
 license = { text = "MIT" }
 requires-python = ">=3.11,<4.0"
 dependencies = [
-    "beeai-framework>=0.1.36",
+    "beeai-framework[mcp]>=0.1.45",
     "python-dotenv>=1.0.0",
 ]
 
